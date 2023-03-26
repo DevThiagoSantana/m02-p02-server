@@ -37,7 +37,7 @@ No diretório do projeto, você pode executar:
 Executa o aplicativo.
 
 ```
-npm dev
+npm run dev
 ```
 
 O servidor roda a partir da **porta 8081**
