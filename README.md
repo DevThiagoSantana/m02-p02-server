@@ -8,7 +8,6 @@ Realize o fork do projeto
 
 <img width="301" alt="image" src="https://user-images.githubusercontent.com/66982809/227803405-2e4e85a4-4e4a-495f-ba03-3db88a91d04d.png">
 
-
 Para clonar o repositório é preciso executar o comando
 
 ```
@@ -321,4 +320,75 @@ Headers: {
         }
     }
 ]
+```
+
+### Cadastrar acompanhamentos pedagógicos:
+
+Endpoint autenticado, é necessário adicionar no Authorization o accessToken retornado pelo login.
+
+```
+URL: http://localhost:8081/accompaniments
+Método: POST
+Headers: {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer accessToken"
+}
+Body: {
+    "studentId": 3,
+    "userId": 2,
+    "date": "27/03/2023",
+    "title": "Acompanhamento teste",
+    "description": "Descrição do acompanhamento",
+    "finished": false
+}
+```
+
+**Resultado:**
+
+```
+{
+    "studentId": 3,
+    "userId": 2,
+    "date": "27/03/2023",
+    "title": "Acompanhamento teste",
+    "description": "Descrição do acompanhamento",
+    "finished": false,
+    "id": 1
+}
+```
+
+### Editar acompanhamentos pedagógicos:
+
+Endpoint autenticado, é necessário adicionar no Authorization o accessToken retornado pelo login.
+
+```
+URL: http://localhost:8081/accompaniments/1
+Método: PUT
+Headers: {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer accessToken"
+}
+Body: {
+    "id": 1,
+    "studentId": 3,
+    "userId": 2,
+    "date": "27/03/2023",
+    "title": "Acompanhamento teste",
+    "description": "Descrição do acompanhamento",
+    "finished": true
+}
+```
+
+**Resultado:**
+
+```
+{
+    "id": 1,
+    "studentId": 3,
+    "userId": 2,
+    "date": "27/03/2023",
+    "title": "Acompanhamento teste",
+    "description": "Descrição do acompanhamento",
+    "finished": true
+}
 ```

@@ -1,15 +1,6 @@
 {
   "users": [
     {
-      "email": "thais@mail.com",
-      "password": "$2a$10$TcLS34coWCm0F5XN6qJGg.QHWh27KrBa51uKkGQKIIsHIaB7iy6im",
-      "name": "Thais",
-      "phone": "46 999999",
-      "birthdate": "10/09/1994",
-      "cpf": "0843090890",
-      "id": 1
-    },
-    {
       "email": "usuario@teste.com.br",
       "password": "$2a$10$BmakfCEiDXPHjpAY.oriKOnm0.qmRYYW3Ny1a4FqdvLfzvk4Vj0qm",
       "name": "Pedagoga teste",
@@ -31,13 +22,13 @@
   ],
   "accompaniments": [
     {
+      "id": 1,
       "studentId": 3,
       "userId": 2,
       "date": "27/03/2023",
       "title": "Acompanhamento teste",
       "description": "Descrição do acompanhamento",
-      "finished": false,
-      "id": 1
+      "finished": true
     }
   ]
 }
