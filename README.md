@@ -5,7 +5,7 @@
 ## Primeiros passos
 
 Realize o fork do projeto
-image.
+<img width="301" alt="image" src="https://user-images.githubusercontent.com/66982809/227803405-2e4e85a4-4e4a-495f-ba03-3db88a91d04d.png">
 
 Para clonar o repositório é preciso executar o comando
 
