@@ -274,14 +274,14 @@ Headers: {
 ]
 ```
 
-### Listar os Acompanhamentos pedagógicos de um único usuário:
+### Listar os Acompanhamentos pedagógicos em aberto de um único usuário:
 
 Endpoint autenticado, é necessário adicionar no Authorization o accessToken retornado pelo login.
 Alterar o número para o id do usuário desejado `userId=2`.
 Se não quiser exibir as informações detalhadas do usuário e do aluno basta remover `&_expand=user&_expand=student` da URL.
 
 ```
-URL: http://localhost:8081/accompaniments?userId=2&_expand=user&_expand=student
+URL: http://localhost:8081/accompaniments?finished=false&userId=2&_expand=user&_expand=student
 Método: GET
 Headers: {
     "Content-Type": "application/json",
@@ -320,6 +320,34 @@ Headers: {
         }
     }
 ]
+```
+
+### Obter um único acompanhamento pedagógico:
+
+Endpoint autenticado, é necessário adicionar no Authorization o accessToken retornado pelo login.
+Alterar o número `1` para o id do acompanhamento desejado.
+
+```
+URL: http://localhost:8081/accompaniments/1
+Método: GET
+Headers: {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer accessToken"
+}
+```
+
+**Resultado:**
+
+```
+{
+    "id": 1,
+    "studentId": 3,
+    "userId": 2,
+    "date": "27/03/2023",
+    "title": "Acompanhamento teste",
+    "description": "Descrição do acompanhamento",
+    "finished": false
+}
 ```
 
 ### Cadastrar acompanhamentos pedagógicos:
